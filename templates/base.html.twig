@@ -3,10 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+        {% include "/home/partials/_navbar.html.twig" %}
         {% block body %}{% endblock %}
+
+        <script src="/js/jquery.js"></script>
+        <script src="/js/ajax.js"></script>
+        <script src="/js/popper.js"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
