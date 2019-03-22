@@ -1,0 +1,39 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Articles - Index{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row my-3">
+            <div class="col-md-3">
+                <a href="#" class="btn btn-outline-primary">Ecrire un article</a>
+                <a href="#" class="btn btn-outline-secondary">Ajouter une catégorie</a>
+            </div>
+            <div class="col-md-9">
+                <h2>Liste des articles</h2>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Titre</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Auteur</th>
+                        <th scope="col">Workflow</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="table-active">
+                        <th>Active</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

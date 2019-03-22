@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/leaflet.css">
+    <link rel="stylesheet" href="/css/style.css">
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+{% include "/admin/partials/_navbar.html.twig" %}
+{% block body %}{% endblock %}
+
+<script src="/js/jquery.js"></script>
+<script src="/js/ajax.min.js"></script>
+<script src="/js/boostrap.js"></script>
+{% block javascripts %}{% endblock %}
+</body>
+</html>

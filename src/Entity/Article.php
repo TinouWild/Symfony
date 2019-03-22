@@ -31,6 +31,11 @@ class Article
      */
     private $categorie;
 
+    /**
+     * @ORM\Column(type="string", length=255, options={"default"="brouillon"})
+     */
+    private $etat = 'brouillon';
+
     public function getId(): ?int
     {
         return $this->id;
@@ -68,6 +73,18 @@ class Article
     public function setCategorie(?Categorie $categorie): self
     {
         $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    public function getEtat(): ?string
+    {
+        return $this->etat;
+    }
+
+    public function setEtat(string $etat): self
+    {
+        $this->etat = $etat;
 
         return $this;
     }

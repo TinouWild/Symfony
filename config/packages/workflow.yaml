@@ -1,0 +1,24 @@
+framework:
+    workflows:
+        article:
+            type: 'workflow'
+            audit_trail:
+                enabled: true
+            marking_store:
+                type: 'single_state'
+                arguments:
+                    - 'etat'
+            supports:
+                - App\Entity\Article
+            initial_place: brouillon
+            places:
+                - brouillon
+                - publie
+                - archive
+            transitions:
+                publication:
+                    from: brouillon
+                    to: publie
+                archivage:
+                    from: publie
+                    to: archive
